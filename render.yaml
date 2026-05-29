@@ -1,5 +1,0 @@
-services:
-  - type: web
-    name: springboot-app
-    runtime: docker
-    plan: free
