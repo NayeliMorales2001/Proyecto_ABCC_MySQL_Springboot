@@ -1,4 +1,4 @@
-FROM eclipse-temurin:17
+FROM eclipse-temurin:17-jdk
 
 WORKDIR /app
 
@@ -8,6 +8,6 @@ RUN chmod +x mvnw
 
 RUN ./mvnw clean package -DskipTests
 
-EXPOSE 8080
+EXPOSE 10000
 
-CMD ["java", "-jar", "target/proyecto-abcc-mysql.jar"]
+CMD ["java","-jar","target/proyecto-abcc-mysql.jar","--server.port=10000"]
